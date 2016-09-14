@@ -1,0 +1,97 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "TBR3eId0MO9lfYrPtJ/82rF5buk=",
+			"path": "github.com/astaxie/beego",
+			"revision": "88c5dfa6ead42e624c2e7d9e04eab6cb2d07412a",
+			"revisionTime": "2016-03-23T09:05:40Z"
+		},
+		{
+			"checksumSHA1": "Avsv8fjMgwTVonZRwfuex8ALVOU=",
+			"path": "github.com/astaxie/beego/config",
+			"revision": "88c5dfa6ead42e624c2e7d9e04eab6cb2d07412a",
+			"revisionTime": "2016-03-23T09:05:40Z"
+		},
+		{
+			"checksumSHA1": "SybDTX7GRVGFnEYP44IDFNULqQY=",
+			"path": "github.com/astaxie/beego/context",
+			"revision": "88c5dfa6ead42e624c2e7d9e04eab6cb2d07412a",
+			"revisionTime": "2016-03-23T09:05:40Z"
+		},
+		{
+			"checksumSHA1": "HSyNHiauTk3hE0hMwnlEti60NKs=",
+			"path": "github.com/astaxie/beego/grace",
+			"revision": "88c5dfa6ead42e624c2e7d9e04eab6cb2d07412a",
+			"revisionTime": "2016-03-23T09:05:40Z"
+		},
+		{
+			"checksumSHA1": "roXQz1nZCG+2ZY3WhyHHAim1/C8=",
+			"path": "github.com/astaxie/beego/httplib",
+			"revision": "88c5dfa6ead42e624c2e7d9e04eab6cb2d07412a",
+			"revisionTime": "2016-03-23T09:05:40Z"
+		},
+		{
+			"checksumSHA1": "762J//dUIskKkmM3O1ePhD10G5o=",
+			"path": "github.com/astaxie/beego/logs",
+			"revision": "88c5dfa6ead42e624c2e7d9e04eab6cb2d07412a",
+			"revisionTime": "2016-03-23T09:05:40Z"
+		},
+		{
+			"checksumSHA1": "+XHtsqlXerSNYPNqo3AT3QCUxPY=",
+			"path": "github.com/astaxie/beego/session",
+			"revision": "88c5dfa6ead42e624c2e7d9e04eab6cb2d07412a",
+			"revisionTime": "2016-03-23T09:05:40Z"
+		},
+		{
+			"checksumSHA1": "kfyldtqJye9OG0NaF1cNsfeoNcM=",
+			"path": "github.com/astaxie/beego/toolbox",
+			"revision": "88c5dfa6ead42e624c2e7d9e04eab6cb2d07412a",
+			"revisionTime": "2016-03-23T09:05:40Z"
+		},
+		{
+			"checksumSHA1": "MGTjsokZsrgJ9pqESarpf0abzAk=",
+			"path": "github.com/astaxie/beego/utils",
+			"revision": "88c5dfa6ead42e624c2e7d9e04eab6cb2d07412a",
+			"revisionTime": "2016-03-23T09:05:40Z"
+		},
+		{
+			"checksumSHA1": "Y2hjUGHTjpUdaRJlNV/b1zYXEoA=",
+			"path": "github.com/bitly/go-simplejson",
+			"revision": "aabad6e819789e569bd6aabf444c935aa9ba1e44",
+			"revisionTime": "2015-09-15T16:53:35Z"
+		},
+		{
+			"checksumSHA1": "/k8CpjNyz9iy83Ukm2hnAGsqVZ4=",
+			"path": "github.com/go-sql-driver/mysql",
+			"revision": "0f2db9e6c9cff80a97ca5c2c5096242cc1554e16",
+			"revisionTime": "2016-03-04T22:12:35Z"
+		},
+		{
+			"checksumSHA1": "qUjZHcoophrdExVVHkLUkK+AzPw=",
+			"path": "gopkg.in/mgo.v2",
+			"revision": "d90005c5262a3463800497ea5a89aed5fe22c886",
+			"revisionTime": "2016-02-09T00:46:34Z"
+		},
+		{
+			"checksumSHA1": "dI6A+axU3DTkPdkAQdaf7lRmtEQ=",
+			"path": "gopkg.in/mgo.v2/bson",
+			"revision": "d90005c5262a3463800497ea5a89aed5fe22c886",
+			"revisionTime": "2016-02-09T00:46:34Z"
+		},
+		{
+			"checksumSHA1": "lflrleHLqpORhnoOjHVHokpeq54=",
+			"path": "gopkg.in/mgo.v2/internal/sasl",
+			"revision": "d90005c5262a3463800497ea5a89aed5fe22c886",
+			"revisionTime": "2016-02-09T00:46:34Z"
+		},
+		{
+			"checksumSHA1": "CrciG7woshiINwZxPsxisgDGL3Y=",
+			"path": "gopkg.in/mgo.v2/internal/scram",
+			"revision": "d90005c5262a3463800497ea5a89aed5fe22c886",
+			"revisionTime": "2016-02-09T00:46:34Z"
+		}
+	],
+	"rootPath": "jfapp"
+}
