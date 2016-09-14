@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Cache" content="no-cache">
+<title>信用报告</title>
+<link rel="stylesheet" href="../css/main.css" type="text/css" />
+<script src="../js/jquery-1.11.3.js"></script>
+</head>
+<body style="">
+
+	<div style="width: 100%">
+		<header style="">
+			<div style="" class="re" onclick="history.go(-1)">&lt;返回</div>
+			<div style="" class="center">信用报告</div>
+		</header>
+
+		<div style="margin: 10px 0 10px 15px;">
+			<span class="hui6">报告编号：</span>
+			<span class="hui3" id="ReportNumber"></span>
+			<div style="height: 10px;" ></div>
+			<span class="hui6">查询时间：</span>
+			<span class="hui3" id="QueryDate"></span>
+			<div style="height: 10px;"></div>
+			<span class="hui6">报告时间：</span>
+			<span class="hui3" id="ReportDate"></span>
+			<hr>
+
+			<span class="hui6">姓名：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;</span>
+			<span class="hui3" id="RealName"></span><span class="hui9">（<span id="MaritalStatus"></span>）</span>
+			<div style="height: 10px;"></div>
+			<span class="hui6">证件证号：</span>
+			<span class="hui3" id="IdNumber"></span><span class="hui9">（<span id="CardType"></span>）</span>
+			<div style="height: 10px;"></div>
+		</div>
+
+		<div style="height: 14px;background-color: #dfdfdf"></div>
+		<div style="margin: 10px 15px 10px 15px;">
+			<div style="height: 5px;"></div>
+			<img src="../images/1.png" style="width: 30px;position: absolute;margin-top:-5px;"><strong style="margin: 20px 0 0 40px;">信贷记录</strong>
+			<br>
+			<div style="height: 10px;"></div>
+			<span class="hui9" style="line-height: 20px;">
+				这部分包含您的信用卡、贷款和其他信贷记录。
+				金额类数据均以人民币计算，精确到元。
+			</span>
+
+		</div>
+		<table class=" hui3 table1" style="width: 100%"cellspacing="0" cellpadding="0">
+			<tr style="width: 100%;">
+				<th style="width: 30%;" class="td"></th>
+				<th style="width: 23%;"class="td center">信用卡</th>
+				<th style="width: 23%;"class="td center">购房贷款</th>
+				<th style="width: 23%;"class="td1 center">其他贷款</th>
+			</tr>
+			<tr style="width: 100%;">
+				<td style="width: 30%;padding-left: 15px" class="td">账户数</td>
+				<td style="width: 23%;"class="td center" id="CreditCardRecordsAccounts">0</td>
+				<td style="width: 23%;"class="td center" id="MortgageAccounts">0</td>
+				<td style="width: 23%;"class="td1 center" id="LoanRecordsAccounts">0</td>
+			</tr>
+			<tr style="width: 100%;">
+				<td style="width: 30%;padding-left: 15px" class="td">未结算/未销账户数</td>
+				<td style="width: 23%;"class="td center" id="CreditCardRecordsHolds">0</td>
+				<td style="width: 23%;"class="td center" id="MortgageHolds">0</td>
+				<td style="width: 23%;"class="td1 center" id="LoanRecordsHolds">0</td>
+			</tr>
+			<tr style="width: 100%;">
+				<td style="width: 30%;padding-left: 15px" class="td">逾期账户数</td>
+				<td style="width: 23%;"class="td center"  id="CreditCardRecordsOverdues">0</td>
+				<td style="width: 23%;"class="td center" id="MortgageOverdues">0</td>
+				<td style="width: 23%;"class="td1 center" id="LoanRecordsOverdues">0</td>
+			</tr>
+			<tr style="width: 100%;">
+				<td style="width: 30%;padding-left: 15px" class="td">逾期≥90天账户数</td>
+				<td style="width: 23%;"class="td center"  id="CreditCardRecordsSeverityOverdues">0</td>
+				<td style="width: 23%;"class="td center" id="MortgageSeverityOverdues">0</td>
+				<td style="width: 23%;"class="td1 center" id="LoanRecordsSeverityOverdues">0</td>
+			</tr>
+			<tr style="width: 100%;">
+				<td style="width: 30%;padding-left: 15px" class="td">为其他人担保笔数</td>
+				<td style="width: 23%;"class="td center"  id="CreditCardRecordsGuarantees">0</td>
+				<td style="width: 23%;"class="td center" id="MortgageGuarantees">0</td>
+				<td style="width: 23%;"class="td1 center" id="LoanRecordsGuarantees">0</td>
+			</tr>
+
+		</table>
+
+		<div style="height: 14px;background-color: #dfdfdf"></div>
+		<div style="margin: 10px 15px 10px 15px;">
+			<div style="height: 5px;"></div>
+			<img src="../images/2.png" style="width: 30px;position: absolute;margin-top:-5px;"><strong style="margin: 20px 0 0 40px;">公共记录</strong>
+			<br>
+			<div style="height: 10px;"></div>
+			<span class="hui9" style="line-height: 20px;">
+				系统内没有您最近5年的欠税记录、民事判决记录、行政处罚记录及电信欠费记录。
+			</span>
+		</div>
+		<table class=" hui3 table1" style="width: 100%"cellspacing="0" cellpadding="0">
+			<tr style="width: 100%;">
+				<td style="width: 35%;padding-left: 15px" class="td">欠税数</td>
+
+				<td style="width: 65%;"class="td1 center" id="TaxRecords">0</td>
+			</tr>
+			<tr style="width: 100%;">
+				<td style="width: 35%;padding-left: 15px" class="td">民事判决数</td>
+
+				<td style="width: 65%;"class="td1 center" id="CivilJudgementRecords">0</td>
+			</tr>
+			<tr style="width: 100%;">
+				<td style="width: 35%;padding-left: 15px" class="td">强制执行数</td>
+
+				<td style="width: 65%;"class="td1 center" id="EnforceRecords">0</td>
+			</tr>
+			<tr style="width: 100%;">
+				<td style="width: 35%;padding-left: 15px" class="td">行政处罚数</td>
+
+				<td style="width: 65%;"class="td1 center" id="PunishmentRecords">0</td>
+			</tr>
+			<tr style="width: 100%;">
+				<td style="width: 35%;padding-left: 15px" class="td">电信欠费笔数</td>
+
+				<td style="width: 65%;"class="td1 center" id="TeleconOwnRecords">0</td>
+			</tr>
+
+		</table>
+
+		<div style="height: 14px;background-color: #dfdfdf"></div>
+		<div style="margin: 10px 15px 10px 15px;">
+			<div style="height: 5px;"></div>
+			<img src="../images/3.png" style="width: 30px;position: absolute;margin-top:-5px;"><strong style="margin: 20px 0 0 40px;">查询记录</strong>
+			<br>
+			<div style="height: 10px;"></div>
+			<span class="hui9" style="line-height: 20px;">
+				这部分包含您的信用报告最近2年被查询的记录。
+			</span>
+		</div>
+		<table class=" hui3 table1" style="width: 100%"cellspacing="0" cellpadding="0">
+			<tr style="width: 100%;">
+				<td style="width: 50%;padding-left: 15px" class="td">个人查询数（不包含网络查询）</td>
+
+				<td style="width: 50%;"class="td1 center" id="PersonalQueryTotal">0</td>
+			</tr>
+			<tr style="width: 100%;">
+				<td style="width: 50%;padding-left: 15px" class="td">贷款审批查询数</td>
+
+				<td style="width: 50%;"class="td1 center">0</td>
+			</tr>
+			<tr style="width: 100%;">
+				<td style="width: 50%;padding-left: 15px" class="td">个人担保审查询数</td>
+
+				<td style="width: 50%;"class="td1 center">0</td>
+			</tr>
+			<tr style="width: 100%;">
+				<td style="width: 50%;padding-left: 15px" class="td">信用卡审批查询数</td>
+
+				<td style="width: 50%;"class="td1 center">0</td>
+			</tr>
+			<tr style="width: 100%;">
+				<td style="width: 50%;padding-left: 15px" class="td">贷后管理查询数</td>
+
+				<td style="width: 50%;"class="td1 center">0</td>
+			</tr>
+
+		</table>
+
+		<div style="height: 60px;line-height:60px;background-color: #dfdfdf;" class="center hui9">
+			查看完整信用报告，请登录<a style="color: #4bafff" href="https://ipcrs.pbccrc.org.cn/ ；；；">征信中心官网</a>。
+		</div>
+
+
+
+	</div>
+
+</body>
+<script>
+//截取url参数
+	function GetRequest() {
+		var url = window.location.search; //获取url中"?"符后的字串
+		var theRequest = new Object();
+		if (url.indexOf("?") != -1) {
+			var str = url.substr(1);
+			strs = str.split("&");
+			for(var i = 0; i < strs.length; i ++) {
+				theRequest[strs[i].split("=")[0]]=(strs[i].split("=")[1]);
+			}
+		}
+		return theRequest;
+	}
+
+//展示数据
+	function setData(data){
+		$('#ReportNumber').html(data.ReportNumber);
+		$('#QueryDate').html(data.QueryDate);
+		$('#ReportDate').html(data.ReportDate);
+		$('#RealName').html(data.RealName);
+		$('#MaritalStatus').html(data.MaritalStatus);
+		$('#IdNumber').html(data.IdNumber);
+		$('#CardType').html(data.CardType);
+
+		$('#CreditCardRecordsAccounts').html(data.CreditCardRecords.Accounts);
+		$('#CreditCardRecordsHolds').html(data.CreditCardRecords.Holds);
+		$('#CreditCardRecordsOverdues').html(data.CreditCardRecords.Overdues);
+		$('#CreditCardRecordsSeverityOverdues').html(data.CreditCardRecords.SeverityOverdues);
+		$('#CreditCardRecordsGuarantees').html(data.CreditCardRecords.Guarantees);
+
+		$('#MortgageAccounts').html(data.Mortgage.Accounts);
+		$('#MortgageHolds').html(data.Mortgage.Holds);
+		$('#MortgageOverdues').html(data.Mortgage.Overdues);
+		$('#MortgageSeverityOverdues').html(data.Mortgage.SeverityOverdues);
+		$('#MortgageGuarantees').html(data.Mortgage.Guarantees);
+
+		$('#LoanRecordsAccounts').html(data.LoanRecords.Accounts);
+		$('#LoanRecordsHolds').html(data.LoanRecords.Holds);
+		$('#LoanRecordsOverdues').html(data.LoanRecords.Overdues);
+		$('#LoanRecordsSeverityOverdues').html(data.LoanRecords.SeverityOverdues);
+		$('#LoanRecordsGuarantees').html(data.LoanRecords.Guarantees);
+
+		$('#TaxRecords').html(data.PublicRecords.TaxRecords);
+		$('#CivilJudgementRecords').html(data.PublicRecords.CivilJudgementRecords);
+		$('#EnforceRecords').html(data.PublicRecords.EnforceRecords);
+		$('#PunishmentRecords').html(data.PublicRecords.PunishmentRecords);
+		$('#TeleconOwnRecords').html(data.PublicRecords.TeleconOwnRecords);
+
+		$('#PersonalQueryTotal').html(data.QueryRecords.PersonalQueryTotal);
+
+	}
+
+	//请求时发送的参数
+	var theRequest = new Object();
+	theRequest=GetRequest();
+
+	var merchantId=theRequest["merchantId"],
+		userId=theRequest["userId"],
+		loginName=theRequest["loginName"];
+
+	//请求数据
+	function getData() {
+		var hostUrl = 'http://test-yixin.com/yxjfapp/creditReport/getReport?' +
+		//var hostUrl = 'http://cwpay.yixin.com/yxjfapp/creditReport/getReport?' +
+		//var hostUrl = 'http://10.100.140.84:8082/yxjfapp/creditReport/getReport?' +
+				'merchantId=' + merchantId +
+				'&userId=' + userId +
+				'&loginName=' + loginName;
+
+		$.ajax({
+			url: hostUrl,
+			type: 'GET',
+			dataType: 'jsonp',
+			data: {
+			},
+			success: function(res) {
+
+				setData(res);
+			},
+			error: function() {
+
+				alert('请求数据失败。');
+			}
+		});
+	}
+
+//	调用请求数据函数
+	getData();
+
+</script>
+</html>

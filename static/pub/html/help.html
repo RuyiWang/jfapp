@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Cache" content="no-cache">
+<title>帮助</title>
+<link rel="stylesheet" href="../css/main.css" type="text/css" />
+<script src="../js/jquery-1.11.3.js"></script>
+</head>
+<body style="">
+
+	<div style="width: 100%">
+		<header style="">
+			<div style="" class="re" onclick="history.go(-1)">&lt;返回</div>
+			<div style="" class="center">帮助</div>
+		</header>
+
+		<div style="" class="t1 center">
+			常见问题
+		</div>
+
+		<div style="" class="t2">1、网银登录不成功</div>
+		<div style="" class="de">
+			<div >（1）确认使用的银行卡是否开通网银</div>
+			<div >（2）确认网银登录账号、密码的正确性</div>
+			<div >（3）不支持K宝等类型的网银登录</div>
+			<div >（4）身份确认时采用的银行卡需与网银登录的银行卡保持一致</div>
+			<div >（5）保证网络连接正常</div>
+		</div>
+
+		<div class="t2">2、身份确认无法通过</div>
+		<div class="de">
+			<div >（1）身份确认需要的姓名、身份号码、银行卡卡号应为银行卡开卡时用户身份信息</div>
+			<div >（2）确认银行卡可以正常使用，未被冻结、挂失等</div>
+		</div>
+
+		<div class="t2">3、无法查询征信报告</div>
+		<div class="de">
+			<div >（1）确认已开通央行信用报告查询账号</div>
+			<div >（2）手机登录前，已经在央行征信官网进行了信用报告的申请。</div>
+		</div>
+
+		<div class="t2">4、无法登录金服</div>
+		<div class="de">
+			<div >（1）请确保手机的正常通讯，接收到金服的短信验证码</div>
+			<div >（2）请保证手机网路信号正常，iOS设备请确认为金服打开移动网络信号</div>
+			<div style="height: 25px"></div>
+			<div >若以上回答不能解决您的问题，请反馈给我们，我们将及时处理。</div>
+		</div>
+		<div style="height: 90px"></div>
+		<footer class="feedback">
+			<a style="color: #ffb200" href="feedback.html">
+			<div  class="center">
+				立即反馈
+			</div>
+			<br>
+			<br>
+			<div style="height: 20px"></div></a>
+		</footer>
+
+
+
+	</div>
+
+</body>
+<script>
+	$(".feedback").mousedown(function(){
+		this.addClass("feedbackColor");
+	}).mouseup(function(){
+		this.removeClass("feedbackColor");
+	});
+
+</script>
+</html>

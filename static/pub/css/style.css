@@ -1,0 +1,43 @@
+#main {
+	padding: 40px;
+	border: 1px solid #E8E3E3;
+	background-color: whitesmoke;
+}
+
+#left {
+	float: left;
+	width: 200px;
+	background-color: #fafafa;
+	border: solid 1px #d2d2d2;
+}
+
+#left ul {
+	margin: 0;
+	padding: 0;
+}
+
+#left ul li {
+	list-style: none;
+	line-height: 30px;
+}
+
+#left ul li a {
+	padding-left: 35px;
+	display: block;
+	background: #fafafa url(../images/icon-s1.gif) no-repeat 190px 25px;
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	font-size: 16px;
+	border-bottom: 1px solid #d2d2d2;
+	color: #999;
+	text-decoration: none;
+}
+
+#right {
+	margin-left: 250px;
+}
+
+.item {
+	margin-top: 10px;
+}
