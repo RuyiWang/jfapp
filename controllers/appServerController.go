@@ -16,7 +16,7 @@ import (
 )
 
 /**
- *宜信金服app接口 v1.1.0版本
+ *金服app接口 v1.1.0版本
  */
 type AppServerController struct {
 	BaseController
